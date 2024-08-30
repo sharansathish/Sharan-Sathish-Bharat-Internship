@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #141414;
+        }
+        .header {
+            background-color: #e50914;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .movie, .tv-show {
+            margin-bottom: 30px;
+        }
+        .movie img, .tv-show img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .movie-title, .tv-show-title {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .movie, .tv-show {
+            display: inline-block;
+            width: 24%;
+            margin: 0 1%;
+            vertical-align: top;
+        }
+        @media (max-width: 768px) {
+            .movie, .tv-show {
+                width: 48%;
+            }
+        }
+        @media (max-width: 480px) {
+            .movie, .tv-show {
+                width: 98%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Netflix Trending</h1>
+    </div>
+    <div class="container">
+        <!-- TV Shows -->
+        <div class="tv-show">
+            <img src="images/stranger.jpg" alt="Stranger Things">
+            <div class="tv-show-title">Stranger Things</div>
+        </div>
+        <div class="tv-show">
+            <img src="images/witcher.jpg" alt="The Witcher">
+            <div class="tv-show-title">The Witcher</div>
+        </div>
+        <div class="tv-show">
+            <img src="images/bridge.jpg" alt="Bridgerton">
+            <div class="tv-show-title">Bridgerton</div>
+        </div>
+        <div class="tv-show">
+            <img src="images/money1.jpg" alt="Money Heist">
+            <div class="tv-show-title">Money Heist</div>
+        </div>
+        <div class="tv-show">
+            <img src="images/ozark.jpg" alt="Ozark">
+            <div class="tv-show-title">Ozark</div>
+        </div>
+        <div class="tv-show">
+            <img src="images/you.jpg" alt="You">
+            <div class="tv-show-title">You</div>
+        </div>
+        <div class="tv-show">
+            <img src="images/crown.jpg" alt="The Crown">
+            <div class="tv-show-title">The Crown</div>
+        </div>
+        <div class="tv-show">
+            <img src="images/luci.jpg" alt="Lucifer">
+            <div class="tv-show-title">Lucifer</div>
+        </div>
+        <div class="tv-show">
+            <img src="images/never.jpg" alt="Never Have I Ever">
+            <div class="tv-show-title">Never Have I Ever</div>
+        </div>
+        <div class="tv-show">
+            <img src="images/sweet.jpg" alt="Sweet Tooth">
+            <div class="tv-show-title">Sweet Tooth</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #weather-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #weather-container h1 {
+            margin: 0;
+            padding-bottom: 20px;
+        }
+
+        #weather-info p {
+            margin: 10px 0;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="weather-container">
+        <h1>Weather App</h1>
+        <select id="city-select">
+            <option value="new_york">New York</option>
+            <option value="los_angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="miami">Miami</option>
+            <option value="houston">Houston</option>
+            <option value="phoenix">Phoenix</option>
+        </select>
+        <div id="weather-info">
+            <h2 id="city-name">City Name</h2>
+            <p id="temperature">Temperature: --°C</p>
+            <p id="weather">Weather: --</p>
+            <p id="humidity">Humidity: --%</p>
+        </div>
+    </div>
+    <script>
+        const weatherData = {
+            new_york: { name: "New York", temperature: "20°C", weather: "Partly cloudy", humidity: "65%" },
+            los_angeles: { name: "Los Angeles", temperature: "25°C", weather: "Sunny", humidity: "50%" },
+            chicago: { name: "Chicago", temperature: "15°C", weather: "Rainy", humidity: "80%" },
+            miami: { name: "Miami", temperature: "30°C", weather: "Hot and humid", humidity: "70%" },
+            houston: { name: "Houston", temperature: "28°C", weather: "Thunderstorms", humidity: "75%" },
+            phoenix: { name: "Phoenix", temperature: "35°C", weather: "Clear sky", humidity: "20%" }
+        };
+
+        const citySelect = document.getElementById('city-select');
+        const cityName = document.getElementById('city-name');
+        const temperature = document.getElementById('temperature');
+        const weather = document.getElementById('weather');
+        const humidity = document.getElementById('humidity');
+
+        function updateWeather() {
+            const selectedCity = citySelect.value;
+            const data = weatherData[selectedCity];
+            cityName.textContent = data.name;
+            temperature.textContent = `Temperature: ${data.temperature}`;
+            weather.textContent = `Weather: ${data.weather}`;
+            humidity.textContent = `Humidity: ${data.humidity}`;
+        }
+
+        citySelect.addEventListener('change', updateWeather);
+
+        // Initialize with the first city
+        updateWeather();
+    </script>
+</body>
+</html>
